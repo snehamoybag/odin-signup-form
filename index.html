@@ -24,36 +24,51 @@
         on
         <a href="https://unsplash.com/photos/i3TDlwBTVbU" target="_blank" rel="noopener norefferer">Unsplash</a></small>
     </div>
-    <form action="./" method="post" class="form">
-      <fieldset class="form__group">
-        <legend class="sr-only">Full Name</legend>
-        <label for="first-name" class="form__label">First Name</label>
-        <input type="text" class="form__input" id="first-name" name="first-name" minlength="2" maxlength="30"
-          title="First Name should be 2 to 30 letters long" required />
-        <label for="last-name" class="form__label">Last Name</label>
-        <input type="text" class="form__input" id="last-name" name="last-name" minlength="1" maxlength="30"
-          title="Last Name should be 1 to 30 letters long" required />
-      </fieldset>
-      <fieldset class="form__group">
-        <legend class="sr-only">Contact Details</legend>
-        <label for="phone-number" class="form__label">Phone Number</label>
-        <input type="number" class="form__input" id="phone-number" name="phone-number" minlength="3" maxlength="15"
-          title="Make sure it is not longer than 15 numbers" required />
-        <label for="email" class="form__label">Email Address</label>
-        <input type="email" class="form__input" id="email" name="email"
-          title="A email address may look something like this: johndow22@gmail.com" required />
-      </fieldset>
-      <fieldset class="form__group">
-        <legend class="sr-only">Password Details</legend>
-        <label for="password" class="form__label">Password</label>
-        <input type="password" class="form__input" id="password" name="password" minlength="6" maxlength="32"
-          title="Password needs to be 6 to 32 characters long" required />
-        <label for="" class="form__label">Confirm Password</label>
-        <input type="text" class="form__input" id="confirm-password" name="confirm-password" required />
-      </fieldset>
-      <button class="form__button">Create Account</button>
+    <div class="form__container">
+      <p>
+        This is not a real online service! You know you need something like
+        this in your life to help you realize your deepest dreams. Sign up now
+        to get started.
+      </p>
+      <p>You know you want to!</p>
+      <form action="./" method="post" class="form">
+        <fieldset class="form__group">
+          <legend class="sr-only">Full Name</legend>
+          <label for="first-name" class="form__label">First Name
+            <input type="text" class="form__input" id="first-name" name="first-name" minlength="2" maxlength="30"
+              title="First Name should be 2 to 30 letters long" required />
+          </label>
+          <label for="last-name" class="form__label">Last Name
+            <input type="text" class="form__input" id="last-name" name="last-name" minlength="1" maxlength="30"
+              title="Last Name should be 1 to 30 letters long" required />
+          </label>
+        </fieldset>
+        <fieldset class="form__group">
+          <legend class="sr-only">Contact Details</legend>
+          <label for="phone-number" class="form__label">Phone Number
+            <input type="number" class="form__input" id="phone-number" name="phone-number" minlength="3" maxlength="15"
+              title="Make sure it is not longer than 15 numbers" required />
+          </label>
+          <label for="email" class="form__label">Email Address
+            <input type="email" class="form__input" id="email" name="email"
+              title="A email address may look something like this: johndow22@gmail.com" required />
+          </label>
+        </fieldset>
+        <fieldset class="form__group">
+          <legend class="sr-only">Password Details</legend>
+          <label for="password" class="form__label">Password
+            <input type="password" class="form__input" id="password" name="password" minlength="6" maxlength="32"
+              title="Password needs to be 6 to 32 characters long" required />
+            <span class="form__error-msg" id="error-msg">* Passwords do not match</span>
+          </label>
+          <label for="" class="form__label">Confirm Password
+            <input type="text" class="form__input" id="confirm-password" name="confirm-password" required />
+          </label>
+        </fieldset>
+        <button class="form__button">Create Account</button>
+      </form>
       <p>Already have an account? <a href="./login.html">Log in</a></p>
-    </form>
+    </div>
   </main>
   <footer></footer>
 </body>
