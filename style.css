@@ -1,0 +1,118 @@
+:root {
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --fs-200: 0.625rem;
+  --fs-400: 1rem;
+  --fs-700: 2rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: none;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+img,
+picture {
+  max-width: 100%;
+}
+
+/* Styling */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: var(--fs-400);
+}
+
+main {
+  max-width: 1440px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+main > * {
+  flex: 1;
+}
+
+.bg-img {
+  min-width: 200px;
+  min-height: 400px;
+  background-image: url("./assets/images/background-photo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--clr-neutral-100);
+  flex-basis: 40%;
+  position: relative;
+}
+
+.bg-img__credit {
+  width: 100%;
+  font-size: var(--fs-200);
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0.7;
+}
+
+.bg-img__credit a {
+  color: var(--clr-neutral-100);
+}
+
+.logo {
+  width: 3em;
+}
+
+.logo__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  padding: 2em 1em;
+  position: absolute;
+  top: 30%;
+}
+
+.title {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  word-spacing: 0.15em;
+}
+
+.form__container {
+  flex-basis: 60%;
+  align-self: center;
+  padding: 3em;
+}
+
+.form input {
+  appearance: none;
+  width: 100%;
+  height: 3em;
+  border: 1px solid;
+  outline: none;
+}
