@@ -1,77 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Signup Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS -->
+    <link href="./style.css" rel="stylesheet" />
+    <!-- JAVASCRIPT -->
+    <script src="./index.js" defer></script>
+  </head>
 
-<head>
-  <title>Signup Form</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- CSS -->
-  <link href="./style.css" rel="stylesheet" />
-  <!-- JAVASCRIPT -->
-  <script src="./index.js" defer></script>
-</head>
-
-<body>
-  <header></header>
-  <main>
-    <div class="bg-img">
-      <div class="logo__wrapper">
-        <img src="./assets/images/logo.svg" alt="logo" class="logo" aria-hidden="true" />
-        <h1 class="title">Nature Explorers</h1>
+  <body>
+    <header></header>
+    <main>
+      <div class="bg-img">
+        <div class="logo__wrapper">
+          <img
+            src="./assets/images/logo.svg"
+            alt="logo"
+            class="logo"
+            aria-hidden="true"
+          />
+          <h1 class="title">Nature Explorers</h1>
+        </div>
+        <small class="bg-img__credit"
+          >Photo by
+          <a
+            href="https://unsplash.com/@malmanxx"
+            target="_blank"
+            rel="noopener norefferer"
+            >malmanxx</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/i3TDlwBTVbU"
+            target="_blank"
+            rel="noopener norefferer"
+            >Unsplash</a
+          ></small
+        >
       </div>
-      <small class="bg-img__credit">Photo by
-        <a href="https://unsplash.com/@malmanxx" target="_blank" rel="noopener norefferer">malmanxx</a>
-        on
-        <a href="https://unsplash.com/photos/i3TDlwBTVbU" target="_blank" rel="noopener norefferer">Unsplash</a></small>
-    </div>
-    <div class="form__container">
+      <div class="form__container">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up now
+          to get started.
+        </p>
+        <p>You know you want to!</p>
+        <form action="./" method="post" class="form">
+          <h2>Let's do this!</h2>
+          <fieldset class="form__group">
+            <legend class="sr-only">Full Name</legend>
+            <label for="first-name" class="form__label"
+              >First Name
+              <input
+                type="text"
+                class="form__input"
+                id="first-name"
+                name="first-name"
+                minlength="2"
+                maxlength="30"
+                title="First Name should be 2 to 30 letters long"
+                required
+              />
+            </label>
+            <label for="last-name" class="form__label"
+              >Last Name
+              <input
+                type="text"
+                class="form__input"
+                id="last-name"
+                name="last-name"
+                minlength="1"
+                maxlength="30"
+                title="Last Name should be 1 to 30 letters long"
+                required
+              />
+            </label>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="sr-only">Contact Details</legend>
+            <label for="phone-number" class="form__label"
+              >Phone Number
+              <input
+                type="number"
+                class="form__input"
+                id="phone-number"
+                name="phone-number"
+                minlength="3"
+                maxlength="15"
+                title="Make sure it is not longer than 15 numbers"
+                required
+              />
+            </label>
+            <label for="email" class="form__label"
+              >Email Address
+              <input
+                type="email"
+                class="form__input"
+                id="email"
+                name="email"
+                title="A email address may look something like this: johndow22@gmail.com"
+                required
+              />
+            </label>
+          </fieldset>
+          <fieldset class="form__group">
+            <legend class="sr-only">Password Details</legend>
+            <label for="password" class="form__label"
+              >Password
+              <input
+                type="password"
+                class="form__input"
+                id="password"
+                name="password"
+                minlength="6"
+                maxlength="32"
+                title="Password needs to be 6 to 32 characters long"
+                required
+              />
+              <span class="form__error-msg" id="error-msg"
+                >* Passwords do not match</span
+              >
+            </label>
+            <label for="confirm-password" class="form__label"
+              >Confirm Password
+              <input
+                type="text"
+                class="form__input"
+                id="confirm-password"
+                name="confirm-password"
+                required
+              />
+            </label>
+          </fieldset>
+          <button type="submit" class="form__button">Create Account</button>
+        </form>
+        <p>Already have an account? <a href="./login.html">Log in</a></p>
+      </div>
+    </main>
+    <footer>
       <p>
-        This is not a real online service! You know you need something like
-        this in your life to help you realize your deepest dreams. Sign up now
-        to get started.
+        Codeded by
+        <a
+          href="https://github.com/snehamoybag"
+          target="_blank"
+          rel="noopener norefferer"
+          >Snehamoy Bag</a
+        >
       </p>
-      <p>You know you want to!</p>
-      <form action="./" method="post" class="form">
-        <h2>Let's do this!</h2>
-        <fieldset class="form__group">
-          <legend class="sr-only">Full Name</legend>
-          <label for="first-name" class="form__label">First Name
-            <input type="text" class="form__input" id="first-name" name="first-name" minlength="2" maxlength="30"
-              title="First Name should be 2 to 30 letters long" required />
-          </label>
-          <label for="last-name" class="form__label">Last Name
-            <input type="text" class="form__input" id="last-name" name="last-name" minlength="1" maxlength="30"
-              title="Last Name should be 1 to 30 letters long" required />
-          </label>
-        </fieldset>
-        <fieldset class="form__group">
-          <legend class="sr-only">Contact Details</legend>
-          <label for="phone-number" class="form__label">Phone Number
-            <input type="number" class="form__input" id="phone-number" name="phone-number" minlength="3" maxlength="15"
-              title="Make sure it is not longer than 15 numbers" required />
-          </label>
-          <label for="email" class="form__label">Email Address
-            <input type="email" class="form__input" id="email" name="email"
-              title="A email address may look something like this: johndow22@gmail.com" required />
-          </label>
-        </fieldset>
-        <fieldset class="form__group">
-          <legend class="sr-only">Password Details</legend>
-          <label for="password" class="form__label">Password
-            <input type="password" class="form__input" id="password" name="password" minlength="6" maxlength="32"
-              title="Password needs to be 6 to 32 characters long" required />
-            <span class="form__error-msg" id="error-msg">* Passwords do not match</span>
-          </label>
-          <label for="" class="form__label">Confirm Password
-            <input type="text" class="form__input" id="confirm-password" name="confirm-password" required />
-          </label>
-        </fieldset>
-        <button class="form__button">Create Account</button>
-      </form>
-      <p>Already have an account? <a href="./login.html">Log in</a></p>
-    </div>
-  </main>
-  <footer></footer>
-</body>
-
+      <p>
+        Project by
+        <a
+          href="https://www.theodinproject.com/"
+          target="_blank"
+          rel="noopener norefferer"
+          >The Odin Project</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
