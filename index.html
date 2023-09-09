@@ -47,7 +47,7 @@
           to get started.
         </p>
         <p>You know you want to!</p>
-        <form action="./" method="post" class="form">
+        <form id="form" action="./" method="post" class="form">
           <h2>Let's do this!</h2>
           <fieldset class="form__group">
             <legend class="sr-only">Full Name</legend>
@@ -119,20 +119,20 @@
                 title="Password needs to be 6 to 32 characters long"
                 required
               />
-              <span class="form__error-msg" id="error-msg"
-                >* Passwords do not match</span
-              >
             </label>
             <label for="confirm-password" class="form__label"
               >Confirm Password
               <input
-                type="text"
+                type="password"
                 class="form__input"
                 id="confirm-password"
                 name="confirm-password"
-                title="Re-type the password"
+                title="Re-type the password to confirm"
                 required
               />
+              <span id="error-pass-msg" class="form__error-msg hidden"
+                >* Passwords do not match</span
+              >
             </label>
           </fieldset>
           <button type="submit" class="form__button">Create Account</button>
