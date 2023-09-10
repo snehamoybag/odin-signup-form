@@ -3,7 +3,7 @@ const passwordEl = document.querySelector("#password");
 const confirmPasswordEl = document.querySelector("#confirm-password");
 const passErrorMsgEl = document.querySelector("#error-pass-msg");
 
-// manually add and remove invalid error
+// manually add and remove invalid error styling
 const throwPassMismatchError = function () {
   passwordEl.classList.add("error");
   confirmPasswordEl.classList.add("error");
