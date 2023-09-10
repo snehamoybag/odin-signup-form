@@ -2,7 +2,7 @@
   --clr-primary-400: hsl(120, 100%, 20%);
 
   --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-neutral-200: hsl(0, 0%, 97%);
+  --clr-neutral-200: hsl(0, 0%, 95%);
   --clr-neutral-600: hsl(0, 0%, 15%);
   --clr-neutral-700: hsl(0%, 0%, 0%);
 
@@ -40,6 +40,10 @@ button {
 img,
 picture {
   max-width: 100%;
+}
+
+a {
+  color: var(--clr-primary-400);
 }
 
 /* Styling */
@@ -142,12 +146,11 @@ main > * {
 .form__container p:last-of-type {
   font-size: var(--fs-400);
   color: var(--clr-neutral-600);
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .form__container p:last-of-type > a {
   text-decoration: none;
-  color: var(--clr-primary-400);
 }
 
 .form {
@@ -156,6 +159,7 @@ main > * {
   padding-top: var(--block-padding);
   padding-bottom: var(--block-padding);
   margin-top: 2rem;
+  box-shadow: 0px 5px 5px hsla(0, 0%, 0%, 0.15);
 }
 
 .form__group {
@@ -230,6 +234,11 @@ main > * {
 
 .form__button:active {
   transform: scale(0.97);
+}
+
+footer {
+  padding: 3em 1em;
+  text-align: center;
 }
 
 /* UTILITY CLASSES */
